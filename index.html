@@ -1,1 +1,166 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/a1720d6b55a2cd97.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-d27b648d47101208.js"/><script src="/_next/static/chunks/fd9d1056-be48aeae6e94b8d1.js" async=""></script><script src="/_next/static/chunks/23-9f742c266e83d8d2.js" async=""></script><script src="/_next/static/chunks/main-app-5a3cd5cc6fa97187.js" async=""></script><script src="/_next/static/chunks/231-f35b59634dca96cb.js" async=""></script><script src="/_next/static/chunks/app/page-bc02da0126984a42.js" async=""></script><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class=""><div id="root"><header class="flex items-center justify-between p-4 bg-gray-800 text-white"><a class="capitalize" href="/password-generator">Password generator</a></header><main><div>Home</div></main><footer></footer></div><script src="/_next/static/chunks/webpack-d27b648d47101208.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/css/a1720d6b55a2cd97.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"2:I[5751,[],\"\"]\n4:I[231,[\"231\",\"static/chunks/231-f35b59634dca96cb.js\",\"931\",\"static/chunks/app/page-bc02da0126984a42.js\"],\"\"]\n5:I[9275,[],\"\"]\n6:I[1343,[],\"\"]\n8:I[6130,[],\"\"]\n9:[]\n"])</script><script>self.__next_f.push([1,"0:[\"$\",\"$L2\",null,{\"buildId\":\"mVr1JvWeXWW5jRT2brm2c\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"\"],\"initialTree\":[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"__PAGE__\",{},[[\"$L3\",[\"$\",\"div\",null,{\"children\":\"Home\"}],null],null],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/a1720d6b55a2cd97.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"\",\"children\":[\"$\",\"div\",null,{\"id\":\"root\",\"children\":[[\"$\",\"header\",null,{\"className\":\"flex items-center justify-between p-4 bg-gray-800 text-white\",\"children\":[\"$\",\"$L4\",null,{\"href\":\"/password-generator\",\"className\":\"capitalize\",\"children\":\"Password generator\"}]}],[\"$\",\"main\",null,{\"children\":[\"$\",\"$L5\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L6\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}]}],[\"$\",\"footer\",null,{}]]}]}]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$L7\"],\"globalErrorComponent\":\"$8\",\"missingSlots\":\"$W9\"}]\n"])</script><script>self.__next_f.push([1,"7:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}]]\n3:null\n"])</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>安全导航密码工具</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* 导航栏样式（参考网页7） */
+      #mainNav {
+        background: #2c3e50;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
+
+      #mainNav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      #mainNav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      #mainNav a:hover {
+        color: #3498db;
+      }
+
+      /* 密码生成器样式（参考网页1、10） */
+      .container {
+        max-width: 800px;
+        margin: 100px auto 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .controls {
+        margin: 1rem 0;
+      }
+
+      .checkboxes {
+        margin: 1rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      button {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background: #2980b9;
+      }
+
+      .result {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      #password {
+        flex: 1;
+        padding: 0.8rem;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#generator">密码生成</a></li>
+        <li><a href="#about">关于</a></li>
+      </ul>
+    </nav>
+
+    <!-- 密码生成器模块 -->
+    <div class="container" id="generator">
+      <h2>随机密码生成器</h2>
+      <div class="controls">
+        <div>
+          <label>密码长度：</label>
+          <input type="number" id="length" min="8" max="32" value="12" />
+        </div>
+        <div class="checkboxes">
+          <label><input type="checkbox" checked /> 小写字母</label>
+          <label><input type="checkbox" checked /> 大写字母</label>
+          <label><input type="checkbox" /> 数字</label>
+          <label><input type="checkbox" /> 符号</label>
+        </div>
+        <button onclick="generate()">生成密码</button>
+      </div>
+      <div class="result">
+        <input type="text" id="password" readonly />
+        <button onclick="copyPassword()">复制</button>
+      </div>
+    </div>
+
+    <script>
+      // 导航栏平滑滚动（参考网页3）
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          window.scrollTo({
+            top: target.offsetTop - 60,
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // 密码生成逻辑（参考网页10、12）
+      function generate() {
+        const length = document.getElementById("length").value;
+        const charSets = {
+          lowercase: "abcdefghijklmnopqrstuvwxyz",
+          uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          numbers: "​**​*",
+          symbols: "!@#$%^&*()_+-=[]{}|;:,.<>?",
+        };
+
+        let charset = "";
+        document.querySelectorAll(".checkboxes input").forEach((cb, index) => {
+          if (cb.checked) charset += Object.values(charSets)[index];
+        });
+
+        let password = "";
+        for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * charset.length);
+          password += charset[randomIndex];
+        }
+
+        document.getElementById("password").value = password;
+      }
+
+      // 复制功能（参考网页10）
+      function copyPassword() {
+        const passwordField = document.getElementById("password");
+        passwordField.select();
+        navigator.clipboard
+          .writeText(passwordField.value)
+          .then(() => alert("密码已复制！"))
+          .catch((err) => console.error("复制失败:", err));
+      }
+    </script>
+  </body>
+</html>
